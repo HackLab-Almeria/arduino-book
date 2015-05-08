@@ -14,3 +14,4 @@ En determinadas ocasiones, si el _zip_ contiene guiones o espacios da fallo, por
 cambiarle el nombre a la carpeta que será del tipo `Adafruit_NeoPixel-master` a `Adafruit_NeoPixel` y volver a comprimirla.
 
 Para descargar las bibliotecas alojadas en **GitHub** basta con pulsar en **Donwload Zip**.
+
