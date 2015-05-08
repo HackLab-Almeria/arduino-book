@@ -10,6 +10,7 @@ Para instalar nueva biblioteca basta con descargarla e instalar el _zip_ desde
 ![Instalar](instalar.png)
 
 
-En determinadas ocasiones, si el _zip_ contiene guiones o espacios da fallo, por lo que recomendable renommbrar el fichero.
+En determinadas ocasiones, si el _zip_ contiene guiones o espacios da fallo, por lo que recomendable descomprimirla,
+cambiarle el nombre a la carpeta que será del tipo `Adafruit_NeoPixel-master` a `Adafruit_NeoPixel` y volver a comprimirla.
 
 Para descargar las bibliotecas alojadas en **GitHub** basta con pulsar en **Donwload Zip**.
