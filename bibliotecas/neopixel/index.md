@@ -37,12 +37,14 @@ void setup() {
 
 void loop() {
 
+   //Creamos un bucle que vaya de 0 a LEDs para ir asignando a cada
+   //LED un color aleatrio
    for (int i = 0; i < LEDS; i++) {
         //Creamos un color, en este caso, aleatorio
         uint32_t color = Adafruit_NeoPixel::Color(random(0, 255), random(0, 255), random(0, 255));
 
         //Asignamos el color. El primer parámetro determina el LED al que le asignamos el color
-        //y el segundo parámetro el colorn e cuestión
+        //y el segundo parámetro el color en cuestión
         strip->setPixelColor(i, color);
    }
 
@@ -74,6 +76,9 @@ void loop() {
 //Declaramos la tira de LEDS
 Adafruit_NeoPixel * strip;
 
+//Creamos los colores que vamos a utilizar según el esquema RGB
+//Podemos consultar los valores RGB de un color en cualquier programa
+//de dibujo como en el Paint.
 uint32_t rojo      = Adafruit_NeoPixel::Color(255,  0,   0);
 uint32_t verde     = Adafruit_NeoPixel::Color(  0, 255,  0);
 uint32_t amarillo  = Adafruit_NeoPixel::Color(255, 255,  0);
