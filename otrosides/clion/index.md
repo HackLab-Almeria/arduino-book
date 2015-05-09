@@ -6,6 +6,10 @@
 esperadas de un entorno de programación de alta calidad así como un potente autocompletado de código que facilita
 el desarrollo y aumenta la productividad.
 
+Hay que avisar de que esta es una **aplicación de pago**, con demo de 30 días. Sin embargo, aquellos que sean estudiantes
+y tengan un correo de educación (de la universidad, el instituto, el colegio...), pueden solicitar un año de todos los
+productos JetBrains [aquí][4]
+
 Desgraciadamente, su integración con Arduino no es trivial. Una opción es utilizar el proyecto base _[Arduino CLion][2]_.
 
 **Arduino CLion** es una configuración base para poder programar Arduino con CLion de forma sencilla.
@@ -48,3 +52,4 @@ usar conjuntamente el Arduino IDE, una solución podría ser crear un _enlace si
 [1]: https://www.jetbrains.com/clion/
 [2]: https://github.com/MiguelAngelLV/arduino-clion
 [3]: https://github.com/queezythegreat/arduino-cmake
+[4]: https://www.jetbrains.com/student/
