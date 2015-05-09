@@ -1,5 +1,7 @@
 # CLion
 
+![CLion](index.png)
+
 **[CLion][1]** es el IDE desarrollado por **JetBrains** para programación en C/C++. Ofrece todas las características
 esperadas de un entorno de programación de alta calidad así como un potente autocompletado de código que facilita
 el desarrollo y aumenta la productividad.
