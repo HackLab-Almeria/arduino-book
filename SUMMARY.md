@@ -8,9 +8,10 @@
 * [Otros IDEs](otrosides/index.md)
    * [CLion](otrosides/clion/index.md)
 * [GPIOS](gpios/index.md)
-   * [Ejemplos](gpios/ejemplos.md)
-     * [Blink](gpios/blink/index.md)
+  * [Blink](gpios/blink/index.md)
 * [Bibliotecas](bibliotecas/index.md)
    * [DHT](bibliotecas/dht/index.md)
    * [NeoPixel](bibliotecas/neopixel/index.md)
+     * [Semámforo](bibliotecas/neopixel/ejemplos/semaforo.md)
+     * [Colores Aleatorios](bibliotecas/neopixel/ejemplos/aleatorios.md)
 

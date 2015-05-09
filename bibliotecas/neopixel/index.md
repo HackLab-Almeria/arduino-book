@@ -7,128 +7,31 @@ Para controlar cada uno de LEDs tendremos que usar biblioteca específica de _Ad
 su [GitHub][1], bastará con descargarla e instalarla.
 
 
-## Ejemplo de LEDs con colores aleatorios
+Para _controlar_ la tira deberemos crear un objeto `Adafruit_NeoPixel`:
 
-````c++
+```c++
+    Adafruit_NeoPixel * strip = new Adafruit_NeoPixel(LEDS, PIN, NEO_GRB + NEO_KHZ800);
+```
 
-//Incluimos la biblioteca
-#include <Adafruit_NeoPixel.h>
+Dónde `LEDS` es el número de LEDs de nuestra tira y `PIN` el GPIO en el que está conectado. Ha de ser un GPIO del tipo
+**PWM**.
 
-//Especificamos el número de LEDS de la tira
-#define LEDS 60
+Posterioremente, podremos asignar un color a cada uno de los LEDs mediante `setPixelColor` y llamamos a `show` para actualizar
+la tira.
 
-//PIN en el que conectaremos el bus de datos
-#define PIN 6
+```c++
 
-//Especificamos el brillo, de 0 a 255
-#define BRILLO 200
+//Creamos una variable con el color que queramos
+uint32_t rojo = Adafruit_NeoPixel::Color(255,  0,   0);
+//Asignamos el color al LED número 4
+strip->setPixelColor(4, rojo);
 
-//Declaramos la tira de LEDS
-Adafruit_NeoPixel * strip;
+//También podemos asignar el color con el patrón RGB directamente,
+//en este caso estamos colocando el LED 6 de color verde
+strip->setPixelColor(6, 0, 255, 0);
 
-void setup() {
-    //Creamos la tira
-    strip = new Adafruit_NeoPixel(LEDS, PIN, NEO_GRB + NEO_KHZ800);
-    //Asignamos el brillo
-    strip->setBrightness(BRILLO);
-    //Iniciamos la tira. Es MUY importante.
-    strip->begin();
-}
-
-void loop() {
-
-   //Creamos un bucle que vaya de 0 a LEDs para ir asignando a cada
-   //LED un color aleatrio
-   for (int i = 0; i < LEDS; i++) {
-        //Creamos un color, en este caso, aleatorio
-        uint32_t color = Adafruit_NeoPixel::Color(random(0, 255), random(0, 255), random(0, 255));
-
-        //Asignamos el color. El primer parámetro determina el LED al que le asignamos el color
-        //y el segundo parámetro el color en cuestión
-        strip->setPixelColor(i, color);
-   }
-
-   //Llamamos a "show" para actualizar los colores de los LEDS
-   strip->show();
-
-   //Esperamos 1 segundo antes actualizar los valores
-   delay(1*1000);
-
-}
-
-````
-
-### Semáforo con un solo LED
-
-
-
-````c++
-
-//Incluimos la biblioteca
-#include <Adafruit_NeoPixel.h>
-
-//PIN en el que conectaremos el bus de datos
-#define PIN 6
-
-//Especificamos el brillo, de 0 a 255
-#define BRILLO 200
-
-//Declaramos la tira de LEDS
-Adafruit_NeoPixel * strip;
-
-//Creamos los colores que vamos a utilizar según el esquema RGB
-//Podemos consultar los valores RGB de un color en cualquier programa
-//de dibujo como en el Paint.
-uint32_t rojo      = Adafruit_NeoPixel::Color(255,  0,   0);
-uint32_t verde     = Adafruit_NeoPixel::Color(  0, 255,  0);
-uint32_t amarillo  = Adafruit_NeoPixel::Color(255, 255,  0);
-
-void setup() {
-    //Creamos la tira
-    strip = new Adafruit_NeoPixel(1, PIN, NEO_GRB + NEO_KHZ800);
-    //Asignamos el brillo
-    strip->setBrightness(BRILLO);
-    //Iniciamos la tira. Es MUY importante.
-    strip->begin();
-}
-
-void loop() {
-
-    //Lo ponemos de color rojo
-    strip->setPixelColor(0, rojo);
-    //Activamos el color
-    strip->show();
-    //Esperamos 2 segundos
-    delay(2*1000);
-
-    //Creamos un bucle para el parpadeo
-    //del color amarillo
-    for (int i = 0; i < 5; i++) {
-       //Activamos el Amarillo
-       strip->setPixelColor(0, amarillo);
-       //Activamos el color
-       strip->show();
-       //Esperamos
-       delay(200);
-       //Apagamos (color 0)
-       strip->setPixelColor(0, 0);
-       //Activamos el color
-       strip->show();
-       //Esperamos
-       delay(200);
-    }
-
-
-    //Lo ponemos de color verde
-    strip->setPixelColor(0, verde);
-    //Activamos el color
-    strip->show();
-    //Esperamos 2 segundos
-    delay(2*1000);
-
-}
-
-````
-
+//Finalmente actualizamos la tira llamando a show
+strip->show();
+```
 
 [1]: https://github.com/adafruit/Adafruit_NeoPixel
