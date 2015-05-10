@@ -14,4 +14,4 @@
    * [NeoPixel](bibliotecas/neopixel/index.md)
      * [Semámforo](bibliotecas/neopixel/ejemplos/semaforo.md)
      * [Colores Aleatorios](bibliotecas/neopixel/ejemplos/aleatorios.md)
-
+   * [SnoozeLib](bibliotecas/snoozelib/index.md)
