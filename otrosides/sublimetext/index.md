@@ -2,7 +2,7 @@
 
 Sublime text es un editor de texto que trae muchas funcionalidades extras por medio de plugins como en este caso STINO; este plugin nos permite poder programar nuestras placas arduino por medio de una interfaz sencilla.
 
-![sublimetextstino](http://i.imgur.com/kqarCyD.png)
+![sublimetextstino](sublime.png)
 
 ## Instalación
 
