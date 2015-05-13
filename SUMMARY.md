@@ -7,6 +7,7 @@
    * [instalar en Mac OS X](arduinoide/instalacion/macosx.md)
 * [Otros IDEs](otrosides/index.md)
    * [CLion](otrosides/clion/index.md)
+   * [Sublime Text](otrosides/sublimetext/index.md)
 * [GPIOS](gpios/index.md)
   * [Blink](gpios/blink/index.md)
 * [Bibliotecas](bibliotecas/index.md)
