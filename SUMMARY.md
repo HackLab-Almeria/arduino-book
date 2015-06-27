@@ -12,6 +12,7 @@
 * [GPIOS](gpios/index.md)
   * [Blink](gpios/blink/index.md)
 * [Bibliotecas](bibliotecas/index.md)
+   * [IR Remote](bibliotecas/irremote/index.md)
    * [DHT](bibliotecas/dht/index.md)
    * [NeoPixel](bibliotecas/neopixel/index.md)
        * [Semámforo](bibliotecas/neopixel/ejemplos/semaforo.md)
