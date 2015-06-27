@@ -15,7 +15,7 @@
    * [IR Remote](bibliotecas/irremote/index.md)
    * [DHT](bibliotecas/dht/index.md)
    * [NeoPixel](bibliotecas/neopixel/index.md)
-       * [Semámforo](bibliotecas/neopixel/ejemplos/semaforo.md)
+       * [Semáforo](bibliotecas/neopixel/ejemplos/semaforo.md)
        * [Chapter](chapter/README.md)
        * [Colores Aleatorios](bibliotecas/neopixel/ejemplos/aleatorios.md)
    * [SnoozeLib](bibliotecas/snoozelib/index.md)
